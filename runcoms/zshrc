@@ -11,3 +11,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+#
+export EDITOR='/usr/bin/nvim'
+export DEFAULT_USER=$USER
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export KEYTIMEOUT=1
+export MATLAB_JAVA=/usr/lib/jvm/java-8-jdk/jre
+export MATLAB_LOG_DIR=/home/jaeyeun/.matlab/logs
+source $HOME/.alias
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
