@@ -27,3 +27,4 @@ export PROJECT_HOME="$HOME/Projects"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
+export RANGER_LOAD_DEFAULT_RC=FALSE
