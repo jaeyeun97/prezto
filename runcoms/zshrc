@@ -31,3 +31,4 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source /home/jaeyeun/miniconda3/etc/profile.d/conda.sh
+export RANGER_LOAD_DEFAULT_RC=FALSE

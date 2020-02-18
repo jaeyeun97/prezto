@@ -40,6 +40,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'python' \
   'haskell' \
+  'pacman' \
   'git' 
 
 #
@@ -98,7 +99,7 @@ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 # zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
-# OS X
+# macOS
 #
 
 # Set the keyword used by `mand` to open man pages in Dash.app
@@ -109,7 +110,7 @@ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 #
 
 # Set the Pacman frontend.
-zstyle ':prezto:module:pacman' frontend 'pacaur'
+zstyle ':prezto:module:pacman' frontend 'trizen'
 
 #
 # Prompt
