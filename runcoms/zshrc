@@ -12,23 +12,23 @@ fi
 
 # Customize to your needs...
 #
-export EDITOR='/usr/bin/nvim'
+export EDITOR="$HOME/.local/bin/nvim"
 export DEFAULT_USER=$USER
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 export KEYTIMEOUT=1
-export MATLAB_JAVA=/usr/lib/jvm/java-8-jdk/jre
-export MATLAB_LOG_DIR=/home/jaeyeun/.matlab/logs
-source $HOME/.alias
+alias vim="$HOME/.local/bin/nvim"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-export PROJECT_HOME="$HOME/Projects"
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
+source  /etc/bash_completion.d/g4d
+source  /etc/bash_completion.d/hgd
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-source /home/jaeyeun/miniconda3/etc/profile.d/conda.sh
-export RANGER_LOAD_DEFAULT_RC=FALSE
+# Source the common XManager bashrc, only adds convenience functions for
+# XManager.
+if [ -r /google/data/ro/teams/dmgi/configs/google_xm_bashrc ] ; then
+  source /google/data/ro/teams/dmgi/configs/google_xm_bashrc
+fi
+
+export XM_DEFAULT_POOL="x"
+export XM_DEFAULT_RESOURCE_ALLOC="group:x/early-pipeline-alloc"
+export FZF_DEFAULT_COMMAND='fdfind'
