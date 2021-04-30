@@ -15,6 +15,9 @@ if zstyle -T ':prezto:module:utility' correct; then
   setopt CORRECT
 fi
 
+# Load 'run-help' function.
+autoload -Uz run-help-{ip,openssl,sudo}
+
 #
 # Aliases
 #
@@ -140,6 +143,10 @@ elif is-cygwin; then
   alias o='cygstart'
   alias pbcopy='tee > /dev/clipboard'
   alias pbpaste='cat /dev/clipboard'
+elif is-termux; then
+  alias o='termux-open'
+  alias pbcopy='termux-clipboard-set'
+  alias pbpaste='termux-clipboard-get'
 else
   alias o='xdg-open'
 
